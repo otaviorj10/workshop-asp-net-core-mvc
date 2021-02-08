@@ -9,9 +9,11 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SalesWebMvc.Services;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Models;
 using SalesWebMvc.Data;
+
 
 namespace SalesWebMvc
 {
@@ -42,6 +44,7 @@ namespace SalesWebMvc
                 builder.MigrationsAssembly("SalesWebMvc")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();/*injeção de dependencia*/
 
         }
 
