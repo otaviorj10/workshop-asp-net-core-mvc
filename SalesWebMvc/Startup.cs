@@ -45,6 +45,8 @@ namespace SalesWebMvc
 
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();/*injeção de dependencia*/
+            services.AddScoped<DepartmentService>();
+
 
         }
 
